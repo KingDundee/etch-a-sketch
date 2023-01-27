@@ -1,17 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Knewave&display=swap');
+
 * {
   padding: 0;
   margin: 0;
+  font-family: 'Knewave', 'cursive', sans-serif;
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   min-height: 100vh;
 }
 
+header, footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 10vh;
+  background-color: lightskyblue;
+  border: 1px solid purple;
+}
+
+header h1, footer div {
+  background: -webkit-linear-gradient(purple, orangered);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  font-size: 3em;
+}
+
+footer div {
+  font-size: 2em;
+}
+
 div.container {
-  height: auto;
-  overflow: auto;
+  align-self: center;
+  height: 600px;
+  width: 600px;
+  padding: 1em;
+  border: 1px solid purple;
+  margin: 1em 0;
+  background-color: firebrick;
 }
 
 div.grid {
-  background-color: yellow;
+  background-color: whitesmoke;
+  border: 1px solid lightgray;
 }

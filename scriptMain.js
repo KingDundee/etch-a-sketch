@@ -1,9 +1,8 @@
 const body = document.querySelector('body');
+const footer = document.querySelector('footer');
 const container = document.createElement('div');
 container.classList.add('container');
-body.appendChild(container);
-
-// create 16x16 grid of square divs
+body.insertBefore(container, footer);
 
 function createGrid(numberX, numberY, width, height) {
   for (let i = 1; i <= numberY; i++) {
@@ -11,7 +10,7 @@ function createGrid(numberX, numberY, width, height) {
       let divTemp = document.createElement('div');
       if (j === 1) {
         divTemp.classList.add('row-separator');
-        divTemp.style.cssText = 'clear: left;';  // row separator
+        divTemp.style.cssText = 'clear: left;';
       }
       else {
         divTemp.classList.add('grid');
