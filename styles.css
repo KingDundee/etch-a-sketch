@@ -53,6 +53,18 @@ label {
   text-align: center;
 }
 
+div.sketch-modes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
+  margin: 1em 0;
+}
+
+div.sketch-modes button {
+  font-size: 1.5em;
+}
+
 div.container {
   align-self: center;
   height: 750px;

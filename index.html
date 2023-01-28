@@ -16,9 +16,15 @@
       <h1>Etch-A-Sketch</h1>
     </header>
     <div class="grid-resolution">
-      <label for="fname">Enter grid resolution between 1 and 20 inclusive (performance will vary):</label>
-      <input type="number" id="num-per-side" name="num-per-side">
+      <label for="resolution">Enter grid resolution between 1 and 20 inclusive (<strong>performance may vary</strong>):</label>
+      <input type="number" id="resolution" name="resolution" min="1" max="20" step="1" value="10">
       <input type="submit" id="submit">
+    </div>
+    <div class="sketch-modes">
+      <button id="standard">Standard</button>
+      <button id="shade">Shade</button>
+      <button id="trippy">Trippy</button>
+      <button id="erase">Erase</button>
     </div>
     <footer>
       <div>
