@@ -94,13 +94,16 @@ function setStandard(event) {
   event.target.style.border = '1px solid gray';
 }
 
-let lightnessValue = 100;
-
 function setShade(event) {
-  lightnessValue--;
-  let shadeChoice = `hsl(240, 0%, ${lightnessValue}%)`;
-  event.target.style.background = `${shadeChoice}`;
-  event.target.style.border = `1px solid ${shadeChoice}`;
+  let gridElement = event.target;
+  let cssObject = window.getComputedStyle(gridElement, null);
+  let currentRGBColor = (((cssObject.getPropertyValue("background-color")).substring(4)).slice(0, -1)).split(',');
+  console.log(currentRGBColor);
+  if (currentRGBColor[0] > 0 && currentRGBColor[0] <= 245) {
+    let shadeChoice = `rgb(${currentRGBColor[0] * 0.90}, ${currentRGBColor[1] * 0.90}, ${currentRGBColor[2] * 0.90})`;
+    event.target.style.background = shadeChoice;
+    event.target.style.border = `1px solid ${shadeChoice}`;
+  }
 }
 
 function setTrippy(event) {
