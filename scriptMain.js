@@ -27,12 +27,14 @@ const submitButton = document.querySelector('#submit');
 submitButton.addEventListener('click', getResolution);
 
 function getResolution() {
+  const minResolution = 1;
+  const maxResolution = 50;
   clearGrid();
-  if (document.getElementById('resolution').value >= 1 && document.getElementById('resolution').value <= 20) {
+  if (document.getElementById('resolution').value >= minResolution && document.getElementById('resolution').value <= maxResolution) {
     createGrid(Math.floor(document.getElementById('resolution').value));
   }
   else {
-    alert('Please enter a resolution between 1 and 20 inclusive!');
+    alert(`Please enter a resolution between ${minResolution} and ${maxResolution} inclusive!`);
   }
 }
 
