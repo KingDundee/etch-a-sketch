@@ -124,3 +124,5 @@ function getRandomColor() {
   let randColor = `rgb(${r}, ${g}, ${b})`;
   return randColor;
 }
+
+createGrid(10); // default to display on start
